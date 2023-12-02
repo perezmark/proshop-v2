@@ -30,7 +30,8 @@ jobs:
     - name: Install Copilot
       id: install-copilot
       run: |
-        curl -Lo copilot https://github.com/aws/copilot-cli/releases/latest/download/copilot-linux && chmod +x copilot && sudo mv copilot /usr/local/bin/copilot && copilot --help
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        brew install aws/tap/copilot-cli
 
     - name: Deploy to ECS
       id: deploy-to-ecs
