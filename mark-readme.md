@@ -17,6 +17,18 @@ COPY package*.json ./
 # Install app dependencies
 RUN npm install
 
+# Change the working directory to the frontend directory
+WORKDIR /app/frontend
+
+# Copy the frontend package.json and package-lock.json files to the frontend working directory
+COPY frontend/package*.json ./
+
+# Install frontend dependencies
+RUN npm install
+
+# Change the working directory back to the main app directory
+WORKDIR /app
+
 # Copy the rest of the application code
 COPY . .
 
@@ -28,6 +40,8 @@ EXPOSE 9000
 
 # Command to run your application
 CMD ["npm", "start"]
+
+RUN npm run data:import
 
 ```
 
@@ -190,7 +204,7 @@ Step 7
 
 Test Register and Login
 
-![image](https://github.com/perezmark/proshop-v2/assets/81707384/4e7ff179-576b-4749-b17a-f0520f2810a7)
+![Alt text](image-1.png)
 
 Step 8
 
