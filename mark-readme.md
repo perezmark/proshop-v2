@@ -175,8 +175,7 @@ Create SNS Topic for Notifications
     Service
         - CPUUtilization
         - MemoryUtulization
-
-
+![Alt text](image.png)
 
 Step 9
 
