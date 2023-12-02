@@ -121,43 +121,52 @@ Environment proshop does not yet exist in application proshop; initializing it.
   - A private DNS namespace for discovering services within the environment            [create complete]  [46.1s]
   - A Virtual Private Cloud to control networking of your AWS resources                [create complete]  [9.6s]
 ✔ Successfully deployed environment proshopLogin Succeeded
-[+] Building 284.4s (12/12) FINISHED                                                                                                                               docker:desktop-linux
- => [internal] load build definition from Dockerfile                                                                                                                               0.0s
- => => transferring dockerfile: 494B                                                                                                                                               0.0s
- => [internal] load .dockerignore                                                                                                                                                  0.0s
- => => transferring context: 2B                                                                                                                                                    0.0s
- => [internal] load metadata for docker.io/library/node:lts                                                                                                                        1.9s
- => [auth] library/node:pull token for registry-1.docker.io                                                                                                                        0.0s
- => [internal] load build context                                                                                                                                                  0.0s
- => => transferring context: 25.05kB                                                                                                                                               0.0s
- => [1/6] FROM docker.io/library/node:lts@sha256:445acd9b2ef7e9de665424053bf95652e0b8995ef36500557d48faf29300170a                                                                  0.0s
- => CACHED [2/6] WORKDIR /app                                                                                                                                                      0.0s
- => [3/6] COPY package*.json ./                                                                                                                                                    0.1s
- => [4/6] RUN npm install                                                                                                                                                         35.8s
- => [5/6] COPY . .                                                                                                                                                                 0.0s
- => [6/6] RUN npm run build                                                                                                                                                      239.5s 
- => exporting to image                                                                                                                                                             7.0s 
- => => exporting layers                                                                                                                                                            6.9s 
- => => writing image sha256:91300ffdb0b1e79447bac5d7abb11d7c14cfdb41b1268b3de9ab7a14df4b4962                                                                                       0.0s 
- => => naming to 359019294801.dkr.ecr.ap-southeast-1.amazonaws.com/proshop/proshop:latest                                                                                          0.0s 
-                                                                                                                                                                                        
-What's Next?                                                                                                                                                                            
+[+] Building 252.3s (16/16) FINISHED                                                          docker:desktop-linux
+ => [internal] load .dockerignore                                                                             0.0s
+ => => transferring context: 2B                                                                               0.0s
+ => [internal] load build definition from Dockerfile                                                          0.0s
+ => => transferring dockerfile: 851B                                                                          0.0s
+ => [internal] load metadata for docker.io/library/node:lts                                                   0.9s
+ => [ 1/11] FROM docker.io/library/node:lts@sha256:445acd9b2ef7e9de665424053bf95652e0b8995ef36500557d48faf29  0.0s
+ => [internal] load build context                                                                             0.0s
+ => => transferring context: 18.71kB                                                                          0.0s
+ => CACHED [ 2/11] WORKDIR /app                                                                               0.0s
+ => CACHED [ 3/11] COPY package*.json ./                                                                      0.0s
+ => CACHED [ 4/11] RUN npm install                                                                            0.0s
+ => CACHED [ 5/11] WORKDIR /app/frontend                                                                      0.0s
+ => CACHED [ 6/11] COPY frontend/package*.json ./                                                             0.0s
+ => CACHED [ 7/11] RUN npm install                                                                            0.0s
+ => CACHED [ 8/11] WORKDIR /app                                                                               0.0s
+ => [ 9/11] COPY . .                                                                                          0.4s
+ => [10/11] RUN npm run build                                                                               241.9s
+ => [11/11] RUN npm run data:import                                                                           8.5s
+ => exporting to image                                                                                        0.4s 
+ => => exporting layers                                                                                       0.4s 
+ => => writing image sha256:14efb7af77362f551a9c62111d6d676e849b1e7aea187e5d38c4552b53a62432                  0.0s 
+ => => naming to 359019294801.dkr.ecr.ap-southeast-1.amazonaws.com/proshop/proshop:latest                     0.0s 
+                                                                                                                   
+What's Next?
   View a summary of image vulnerabilities and recommendations → docker scout quickview
 The push refers to repository [359019294801.dkr.ecr.ap-southeast-1.amazonaws.com/proshop/proshop]
-acd9e082a748: Pushed 
-1f44051a0500: Pushed 
-35da3744e67c: Pushed 
-e237f47a1b29: Pushed 
-60ba0ba2c558: Pushed 
-e471edff4937: Pushed 
-7973049f41b5: Pushed 
-f48a36f74def: Pushed 
-652b81616682: Pushed 
-80bd043d4663: Pushed 
-30f5cd833236: Pushed 
-7c32e0608151: Pushed 
-7cea17427f83: Pushed 
-latest: digest: sha256:a25733e59b8b40ce8e29e68f4d4c2170cc3cb13a0f437ecd2f28b3ff70d3df93 size: 3055
+028853799f06: Pushed 
+d370059dbc5c: Pushed 
+4bd970b91fda: Pushed 
+5f70bf18a086: Layer already exists 
+2f1beff9d133: Layer already exists 
+b152babed9ac: Layer already exists 
+9ae1a5d0331b: Layer already exists 
+35da3744e67c: Layer already exists 
+e237f47a1b29: Layer already exists 
+60ba0ba2c558: Layer already exists 
+e471edff4937: Layer already exists 
+7973049f41b5: Layer already exists 
+f48a36f74def: Layer already exists 
+652b81616682: Layer already exists 
+80bd043d4663: Layer already exists 
+30f5cd833236: Layer already exists 
+7c32e0608151: Layer already exists 
+7cea17427f83: Layer already exists 
+latest: digest: sha256:6292616946451bcc3fca7c52c19db661435aa15e3dbe1b823b3cbcdf50e22d80 size: 4097
 ✔ Proposing infrastructure changes for stack proshop-proshop-proshop
 - Creating the infrastructure for stack proshop-proshop-proshop                   [create complete]     [403.2s]
   - Service discovery for your services to communicate within the VPC             [create complete]     [0.0s]
@@ -180,7 +189,7 @@ latest: digest: sha256:a25733e59b8b40ce8e29e68f4d4c2170cc3cb13a0f437ecd2f28b3ff7
   - An IAM role to control permissions for the containers in your tasks           [create complete]     [18.4s]
 ✔ Deployed service proshop.
 Recommended follow-up action:
-  - Your service is accessible at http://prosho-Publi-r2nHMCiARTOy-499596279.ap-southeast-1.elb.amazonaws.com over the internet.
+  - Your service is accessible at  https://proshop.markdevops.com  over the internet.
 - Be a part of the Copilot ✨community✨!
   Ask or answer a question, submit a feature request...
   Visit 👉 https://aws.github.io/copilot-cli/community/get-involved/ to see how!
