@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+    ports:
+      - "9000:9000"
+    environment:
+      NODE_ENV: production
+      PORT: 9000
+      MONGO_URI: "mongodb+srv://markperezdevops:NlJ9MjjiYDwsU9Tg@proshop-v2-mongodb.5wjsd8f.mongodb.net/?retryWrites=true&w=majority"
+      JWT_SECRET: "markperez.devops"
+      PAGINATION_LIMIT: 8
