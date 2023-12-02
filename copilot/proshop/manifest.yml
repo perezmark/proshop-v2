@@ -11,6 +11,8 @@ http:
   # Requests to this path will be forwarded to your service.
   # To match all requests you can use the "/" path.
   path: '/'
+  alias: proshop.markdevops.com
+  hosted_zone: Z0633236XHJPGFS7AUM
   # You can specify a custom health check path. The default is "/".
   # healthcheck: '/'
 # Configuration for your containers and service.
@@ -27,6 +29,7 @@ count: 1       # Number of tasks that should be running in your service.
 exec: true     # Enable running commands in your container.
 network:
   connect: true # Enable Service Connect for intra-environment traffic between services.
+
 
 # storage:
   # readonly_fs: true       # Limit to read-only access to mounted root filesystems.
