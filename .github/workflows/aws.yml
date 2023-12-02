@@ -30,10 +30,10 @@ jobs:
     - name: Install Copilot
       id: install-copilot
       run: |
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/runner/.bashrc
-        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-        brew install aws/tap/copilot-cli
+        mkdir install
+        cd install
+        curl -Lo copilot https://github.com/aws/copilot-cli/releases/latest/download/copilot-linux && chmod +x copilot && sudo mv copilot /usr/local/bin/copilot && copilot --help
+        
 
     - name: Deploy to ECS
       id: deploy-to-ecs
