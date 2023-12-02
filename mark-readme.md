@@ -4,10 +4,38 @@ Step 1
 
 Create Dockerfile
 
+```
+# Use the official Node.js image as the base image
+FROM node:lts
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install app dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Build the React app
+RUN npm run build
+
+# Expose port 5000 to the outside world (adjust if needed)
+EXPOSE 9000
+
+# Command to run your application
+CMD ["npm", "start"]
+
+```
+
 Step 2
 
 Create MongoDB Cloud Instance
 Edit Environment Variables
+<img width="1214" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/e513cb38-c37b-43f5-94b4-ea90523a9bcc">
 
 Step 3
 
@@ -148,11 +176,11 @@ Recommended follow-up action:
 Step 5
 
 Edit Network Access of MongoDB Instance
+<img width="1232" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/f69d37b2-bc60-4cdc-8b49-ad7ec5f3dda0">
 
 Step 6
 
 Create Route53 Hosted Zone
-Request Certificate using DNS Validation
 
 Create Record "proshop.markdevops.com" pointing to the generated LoadBalancer Endpoint
 
@@ -162,6 +190,7 @@ Step 7
 
 Test Register and Login
 
+![image](https://github.com/perezmark/proshop-v2/assets/81707384/4e7ff179-576b-4749-b17a-f0520f2810a7)
 
 Step 8
 
@@ -182,6 +211,7 @@ Step 9
 Create CI/CD    Pipiline
 
 
+<img width="1417" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/c803df7b-1738-44d6-a76d-70552a7929aa">
 
 
 
