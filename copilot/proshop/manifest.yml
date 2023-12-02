@@ -48,6 +48,13 @@ network:
 #    count: 2               # Number of tasks to run for the "test" environment.
 #    deployment:            # The deployment strategy for the "test" environment.
 #       rolling: 'recreate' # Stops existing tasks before new ones are started for faster deployments.
+variables:
+  LOG_LEVEL: debug
+  PORT: "9000"
+  MONGO_URI: "mongodb+srv://markperezdevops:NlJ9MjjiYDwsU9Tg@proshop-v2-mongodb.5wjsd8f.mongodb.net/?retryWrites=true&w=majority"
+  JWT_SECRET: "markperez.devops"
+  NODE_ENV: "production"
+  PAGINATION_LIMIT: "8"
 
 environments:
   proshop:
