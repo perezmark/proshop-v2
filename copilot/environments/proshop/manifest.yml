@@ -19,8 +19,3 @@ type: Environment
 # Configure observability for your environment resources.
 observability:
   container_insights: false
-
-http:
-  public: # Apply an existing certificate to your public load balancer.
-    certificates:
-      - arn:aws:acm:ap-southeast-1:359019294801:certificate/0cccd0bd-01fe-4e13-b10f-e274c7f302d1

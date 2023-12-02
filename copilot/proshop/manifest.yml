@@ -52,10 +52,3 @@ variables:
   JWT_SECRET: "markperez.devops"
   NODE_ENV: "production"
   PAGINATION_LIMIT: "8"
-
-environments:
-  proshop:
-    http:
-      alias: # The "qa" environment imported a certificate.
-        - name: proshop.markdevops.com
-          hosted_zone: Z0633236XHJPGFS7AUM
