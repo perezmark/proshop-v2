@@ -229,9 +229,15 @@ Create SNS Topic for Notifications
         - MemoryUtulization
 ![Alt text](image.png)
 
-<img width="1097" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/e1b993b4-397b-4563-b570-fdc32b9a87ad">
-<img width="842" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/2162f0bb-e8ea-4b37-9e95-fb9b50925474">
+<img width="1149" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/34731c89-85be-4554-af9a-0cd6e14389b9">
 
+<img width="842" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/2162f0bb-e8ea-4b37-9e95-fb9b50925474">
+<img width="1392" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/e60a295b-7234-4c4f-822b-e31a801815b3">
+
+Sample Notification
+
+<img width="1137" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/5d556d03-3aef-491b-b3af-a8825fb796c3">
+<img width="1106" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/c1350708-a6bc-4359-90be-dafb883c9016">
 
 Step 9
 
