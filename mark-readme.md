@@ -229,6 +229,10 @@ Create SNS Topic for Notifications
         - MemoryUtulization
 ![Alt text](image.png)
 
+<img width="1097" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/e1b993b4-397b-4563-b570-fdc32b9a87ad">
+<img width="842" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/2162f0bb-e8ea-4b37-9e95-fb9b50925474">
+
+
 Step 9
 
 Create CI/CD    Pipiline
