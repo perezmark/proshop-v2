@@ -220,15 +220,6 @@ Step 8
 Create DashBoard and Alarms in CloudWatch 
 Create SNS Topic for Notifications
 
-    Cluster
-        - CPUUtilization
-        - MemoryUtulization
-
-    Service
-        - CPUUtilization
-        - MemoryUtulization
-![Alt text](image.png)
-
 <img width="1149" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/34731c89-85be-4554-af9a-0cd6e14389b9">
 
 <img width="842" alt="image" src="https://github.com/perezmark/proshop-v2/assets/81707384/2162f0bb-e8ea-4b37-9e95-fb9b50925474">
